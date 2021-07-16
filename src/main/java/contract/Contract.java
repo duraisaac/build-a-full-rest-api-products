@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-class Contract {
+public class Contract {
 	
 	private @Id @GeneratedValue Long id;
 	private String employeeClassification;
@@ -16,7 +16,7 @@ class Contract {
 	
 	Contract() {}
 	
-	Contract(String employeeClassification, int daysHolidays, Date employmentPeriod){
+	public Contract(String employeeClassification, int daysHolidays, Date employmentPeriod){
 		
 		this.employeeClassification = employeeClassification;
 		this.daysHolidays = daysHolidays;
