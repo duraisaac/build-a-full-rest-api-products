@@ -3,6 +3,7 @@ package payroll;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@ComponentScan("payroll.EmployeeRepository")
 class EmployeeController {
 
   private final EmployeeRepository repository;

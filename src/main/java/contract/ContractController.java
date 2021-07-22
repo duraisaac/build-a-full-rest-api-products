@@ -7,7 +7,8 @@ import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
-
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
@@ -22,10 +23,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-class ContractController {
+@Component
+public class ContractController {
 	
-	private final ContractRepository repository;
-	private final ContractModelAssembler assembler;
+	ContractRepository repository;
+	ContractModelAssembler assembler;
 	
 	ContractController(ContractRepository repository, ContractModelAssembler assembler) {
 		// TODO Auto-generated constructor stub
